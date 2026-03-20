@@ -1,0 +1,205 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(#c9dbe0, #9fb0ca, #4f617a);
+            color: #333;
+            line-height: 1.6;
+        }
+
+       
+        header {
+            background: linear-gradient(#d7d1ea, #b9b9ca, #5e6287);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        
+        nav {
+            background: linear-gradient(#e5e5e5, #79787e, #211f2e);
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 20px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            background-color: #79787e;
+            color: white;
+        }
+
+        
+        .search-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 12px 20px;
+            font-size: 16px;
+            width: 70%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+
+        .search-container button {
+            padding: 12px 20px;
+            font-size: 16px;
+            background: linear-gradient(#e5e5e5, #79787e, #211f2e);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #79787e;
+            color: white;
+        }
+
+        
+        .reservations-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .reservations-container h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #084b40;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: linear-gradient(#e5e5e5, #79787e, #211f2e);
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        td {
+            background-color: #f9f9f9;
+            font-size: 16px;
+        }
+
+        tr:hover td {
+            background-color: #e0f2f1;
+        }
+
+        .price {
+            color: #00796b;
+            font-weight: 600;
+        }
+
+        
+        .view-btn {
+            background-color: #79787e;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .view-btn:hover {
+            background-color: #211f2e;
+        }
+
+        
+        .status {
+            padding: 6px 12px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .status.completed {
+            background-color: #388e3c;
+            color: white;
+        }
+
+        .status.pending {
+            background-color: #fbc02d;
+            color: white;
+        }
+
+        .status.cancelled {
+            background-color: #e53935;
+            color: white;
+        }
+
+        
+        footer {
+            background-color: #00796b;
+            background: linear-gradient(#f9f9f9, #918d93,#2f3235);
+            padding: 15px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        
+        @media (max-width: 768px) {
+            .search-container input[type="text"] {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .reservations-container {
+                padding: 20px;
+            }
+
+            table th, table td {
+                padding: 10px;
+            }
+
+            .view-btn {
+                padding: 6px 12px;
+            }
+        }

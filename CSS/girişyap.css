@@ -1,0 +1,179 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://r4.wallpaperflare.com/wallpaper/840/954/346/dark-night-rain-car-wallpaper-5910185df11a5dab8687287f8041768d.jpg');
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+           
+        }
+
+        h1 {
+            color: #e74c3c;
+           
+            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        p {
+            color: #000000;
+            margin-bottom: 25px;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .login-form,
+        .register-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+            font-size: 16px;
+            color: #34495e;
+        }
+
+        input,
+        select {
+            padding: 15px;
+            font-size: 16px;
+            border: 2px solid #bdc3c7;
+            border-radius: 8px;
+            width: 100%;
+            background-color: #ecf0f1;
+            color: #34495e;
+            transition: border-color 0.3s ease, background-color 0.3s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: #e74c3c;
+            outline: none;
+            background-color: #f9ebec;
+        }
+
+        button {
+            background-color: #e74c3c;
+            color: #fff;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .login-link,
+        .register-link {
+            margin-top: 20px;
+        }
+
+        .login-link a,
+        .register-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .login-link a:hover,
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        .car-image {
+            margin-top: 30px;
+            width: 60%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .car-image:hover {
+            transform: scale(1.1);
+        }
+
+        .admin-login-button {
+            background-color: #1abc9c;
+            color: white;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .admin-login-button:hover {
+            background-color: #16a085;
+            transform: scale(1.05);
+        }
+
+        .admin-login-button:active {
+            transform: scale(0.98);
+        }
+
+        .admin-login-button-container {
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            button {
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            .car-image {
+                width: 80%;
+            }
+        }

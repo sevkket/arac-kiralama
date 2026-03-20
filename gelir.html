@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yönetici Araç Gelir Raporu</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #34495e;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 30px;
+            color: #ecf0f1;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            background-color: #2c3e50;
+            border-radius: 8px;
+        }
+
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #34495e;
+        }
+
+        table th {
+            background-color: #16a085;
+            font-size: 16px;
+        }
+
+        table td {
+            background-color: #2c3e50;
+            font-size: 14px;
+        }
+
+        table tr:hover {
+            background-color: #1abc9c;
+        }
+
+        .chart-container {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .google-chart {
+            width: 90%;
+            height: 400px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Yönetici Araç Gelir Raporu</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Araç Modeli</th>
+                <th>Toplam Kiralama Sayısı</th>
+                <th>Toplam Gelir (₺)</th>
+                <th>Ortalama Kiralama Süresi</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Fiat Egea Dizel Manuel</td>
+                <td>82</td>
+                <td>₺16,200</td>
+                <td>5 gün</td>
+            </tr>
+            <tr>
+                <td>Hyundai i20 Benzinli Otomatik</td>
+                <td>73</td>
+                <td>₺14,600</td>
+                <td>4.5 gün</td>
+            </tr>
+            <tr>
+                <td>Renault Clio Symbol Benzinli Manuel</td>
+                <td>68</td>
+                <td>₺13,600</td>
+                <td>6 gün</td>
+            </tr>
+            <tr>
+                <td>Citroen C-Elysee Dizel Manuel</td>
+                <td>62</td>
+                <td>₺12,400</td>
+                <td>5.3 gün</td>
+            </tr>
+            <tr>
+                <td>Ford Tourneo Courier Dizel Manuel</td>
+                <td>48</td>
+                <td>₺9,600</td>
+                <td>7 gün</td>
+            </tr>
+            <tr>
+                <td>Renault Clio Joy Benzinli Manuel</td>
+                <td>95</td>
+                <td>₺19,000</td>
+                <td>4.1 gün</td>
+            </tr>
+            <tr>
+                <td>Dacia Sandero Benzinli Otomatik</td>
+                <td>75</td>
+                <td>₺15,000</td>
+                <td>4.6 gün</td>
+            </tr>
+            <tr>
+                <td>Peugeot 308 Dizel Otomatik</td>
+                <td>85</td>
+                <td>₺17,000</td>
+                <td>5.1 gün</td>
+            </tr>
+            <tr>
+                <td>Honda Civic Benzin Manuel</td>
+                <td>53</td>
+                <td>₺10,600</td>
+                <td>5.8 gün</td>
+            </tr>
+            <tr>
+                <td>Renault Taliant Benzinli Otomatik</td>
+                <td>71</td>
+                <td>₺14,200</td>
+                <td>5.2 gün</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="chart-container">
+        <div id="google_chart" class="google-chart"></div>
+    </div>
+
+    <script type="text/javascript">
+        google.charts.load('current', {
+            packages: ['corechart', 'bar']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Araç Modeli', 'Toplam Gelir (₺)'],
+                ['Fiat Egea', 16200],
+                ['Hyundai i20', 14600],
+                ['Renault Clio Symbol', 13600],
+                ['Citroen C-Elysee', 12400],
+                ['Ford Tourneo', 9600],
+                ['Renault Clio Joy', 19000],
+                ['Dacia Sandero', 15000],
+                ['Peugeot 308', 17000],
+                ['Honda Civic', 10600],
+                ['Renault Taliant', 14200]
+            ]);
+
+            var options = {
+                chart: {
+                    title: 'Araçların Toplam Gelir Dağılımı',
+                    subtitle: 'Toplam gelir verileri (₺)',
+                },
+                bars: 'vertical',
+                backgroundColor: '#34495e',
+                colors: ['#1abc9c'],
+                hAxis: {
+                    title: 'Gelir',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Araç Modeli'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('google_chart'));
+            chart.draw(data, options);
+        }
+    </script>
+
+</body>
+</html>

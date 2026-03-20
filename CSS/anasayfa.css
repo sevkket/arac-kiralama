@@ -1,0 +1,389 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(#0e3559, #0875b6, #140f0d);
+    color: #fff;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(#004ec6, #00007f, #005d88);
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffcc00;
+    letter-spacing: 3px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li button {
+    background-color: #595e9a;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+header nav ul li button:hover {
+    background-color: #999cfa;
+    transform: scale(1.1);
+}
+
+.sub-header {
+    background: linear-gradient(#004674, #005d88, #0082a5);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.sub-header nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+.sub-header nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.sub-header nav ul li button {
+    background-color: #14317e;
+    padding: 12px 25px;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sub-header nav ul li button:hover {
+    background-color: #1a67ad;
+    transform: scale(1.1);
+}
+
+.content {
+    padding: 50px 20px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.content h2 {
+    font-size: 30px;
+    color: #fff;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.feedback-header h2 {
+    font-size: 20px;
+    color: #ff6f61;
+}
+
+.feedback-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feedback-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    width: 250px;
+    height: 400px;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #1abc9c;
+    display: none;
+    z-index: 1001;
+    overflow-y: auto;
+}
+
+.feedback-item {
+    background-color: rgba(249, 249, 249, 0.9);
+    border-left: 4px solid #3498db;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.feedback-item h3 {
+    color: #2c3e50;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.feedback-item p {
+    color: #7f8c8d;
+    font-size: 13px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.feedback-item .date {
+    font-size: 12px;
+    color: #bdc3c7;
+    text-align: center;
+}
+
+.complaint-btn {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 8px;
+    text-align: center;
+    margin-top: 10px;
+    left: 0px;
+    position: relative;
+}
+
+.complaint-btn:hover {
+    background-color: #c0392b;
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.car-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    padding: 20px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-item .info {
+    padding: 20px;
+    text-align: left;
+    flex-grow: 1;
+}
+
+.car-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.car-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.car-item:hover img {
+    transform: scale(1.05);
+}
+
+.car-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.car-item p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.car-item .button-group {
+    display: flex;
+    gap: 20px;
+}
+
+.car-item .kirala {
+    background-color: #e74c3c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.car-item .detaylar {
+    background-color: #1abc9c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.car-item .kirala:hover {
+    background-color: #c0392b;
+    transform: scale(1.1);
+}
+
+.car-item .detaylar:hover {
+    background-color: #16a085;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    header nav ul li {
+        margin-left: 15px;
+    }
+
+    .car-list {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .car-item {
+        padding: 15px;
+        min-height: 450px;
+    }
+
+    .car-item h3 {
+        font-size: 20px;
+    }
+
+    .car-item p {
+        font-size: 14px;
+    }
+
+    .car-item .kirala,
+    .car-item .detaylar {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+
+    .complaint-btn {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 22px;
+    }
+
+    header nav ul li {
+        margin-left: 10px;
+    }
+
+    .sub-header nav ul li {
+        margin: 0 10px;
+    }
+
+    .content h2 {
+        font-size: 24px;
+    }
+
+    .feedback-panel {
+        width: 200px;
+        height: 350px;
+    }
+
+    .car-item {
+        min-height: 400px;
+        padding: 10px;
+    }
+
+    .car-item h3 {
+        font-size: 18px;
+    }
+
+    .car-item .kirala,
+    .car-item .detaylar {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}

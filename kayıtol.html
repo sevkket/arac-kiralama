@@ -1,0 +1,152 @@
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Araç Kiralama | Kayıt Ol</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.supercars.net/blog/wp-content/uploads/2020/09/wallpaperflare.com_wallpaper-1-1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+h1 {
+    color: #2a9d8f;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    transition: border 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2a9d8f;
+    outline: none;
+}
+
+button {
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1e7f6a;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.login-link {
+    margin-top: 20px;
+}
+
+.login-link a {
+    color: #1e88e5;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Araç Kiralama</h1>
+        <p>Lütfen bilgilerinizi girip kaydınızı tamamlayınız.</p>
+
+        <form class="register-form">
+            <label for="firstName">Ad:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Soyad:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="carType">Sevdiğiniz araç türü:</label>
+            <select id="carType" name="carType">
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="minivan">Minivan</option>
+                <option value="convertible">Cabrio</option>
+            </select>
+
+            <button type="submit">Kayıt Ol</button>            
+        </form>
+
+        <div class="login-link">
+            <p>Zaten üye misiniz? <a href="girişyap.html">Giriş Yap</a></p>
+        </div>
+    </div>
+</body>
+</html>
